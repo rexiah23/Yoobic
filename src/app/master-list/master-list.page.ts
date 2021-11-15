@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-shadow */
+import { MasterListItemService } from './master-list-item.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./master-list.page.scss'],
 })
 export class MasterListPage implements OnInit {
+  listItems: [];
 
-  constructor() { }
+  constructor(private masterListItemService: MasterListItemService) { }
 
   ngOnInit() {
+    this.masterListItemService.getItems().subscribe((items: any) => {
+      this.listItems = items.results;
+    });
   }
+
 
 }
