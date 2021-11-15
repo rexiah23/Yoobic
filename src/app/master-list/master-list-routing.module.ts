@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: MasterListPage
+  },
+  {
+    path: 'detail',
+    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
   }
 ];
 

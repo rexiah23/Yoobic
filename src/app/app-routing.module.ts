@@ -18,11 +18,7 @@ const routes: Routes = [
   {
     path: 'master-list',
     loadChildren: () => import('./master-list/master-list.module').then( m => m.MasterListPageModule)
-  },
-  {
-    path: 'detail',
-    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
-  },
+  }
 ];
 
 @NgModule({
