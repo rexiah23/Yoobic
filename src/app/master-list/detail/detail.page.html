@@ -18,7 +18,7 @@
   <ion-card *ngIf="chosenItem">
     <ion-img src="../../assets/starwarslogo.png"></ion-img>
     <ion-card-header>
-      <ion-card-title> {{ chosenItem.name }}</ion-card-title>
+      <ion-card-title [ngStyle]="{'font-size': '13vw'}"> {{ chosenItem.name }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-list>
