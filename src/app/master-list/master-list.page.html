@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of listItems">
+    <ion-item *ngFor="let item of listItems" [routerLink]="['./', item.name]">
       <ion-card>
         <ion-img src="../../assets/starwarslogo.png"></ion-img>
         <ion-card-header>
@@ -15,7 +15,6 @@
         <ion-card-content>
           <ion-list>
             <ion-item>Hair Color: {{ item.hair_color }}</ion-item>
-            <ion-item>Skin Color: {{ item.skin_color }}</ion-item>
             <ion-item>Height: {{ item.height }}</ion-item>
           </ion-list>
         </ion-card-content>
