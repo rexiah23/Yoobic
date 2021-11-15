@@ -8,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./master-list.page.scss'],
 })
 export class MasterListPage implements OnInit {
-  listItems: [];
+  listItems: any[];
 
   constructor(private masterListItemService: MasterListItemService) { }
 
   ngOnInit() {
     this.masterListItemService.getItems().subscribe((items: any) => {
       this.listItems = items.results;
+      console.log(items.results);
     });
   }
 

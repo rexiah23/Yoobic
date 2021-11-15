@@ -6,13 +6,24 @@
 
 <ion-content>
   <ion-list>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://media.istockphoto.com/photos/slice-of-fresh-italian-classic-original-pepperoni-pizza-isolated-picture-id496546118?k=20&m=496546118&s=612x612&w=0&h=FgGIOX8GcwkqCJliArmc0C8MYoX0iWdbTC07gnje0ms="></ion-img>
-      </ion-avatar>
-      <ion-label>
-        Test Item
-      </ion-label>
+    <ion-item *ngFor="let item of listItems">
+      <ion-card>
+        <ion-img src="../../assets/starwarslogo.png"></ion-img>
+        <ion-card-header>
+          <ion-card-title> {{ item.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>Hair Color: {{ item.hair_color }}</ion-item>
+            <ion-item>Skin Color: {{ item.skin_color }}</ion-item>
+            <ion-item>Height: {{ item.height }}</ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ion-item>
   </ion-list>
 </ion-content>
+
+
+
+
