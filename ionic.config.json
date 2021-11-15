@@ -1,0 +1,7 @@
+{
+  "name": "Yoobic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
