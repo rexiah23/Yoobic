@@ -12,10 +12,6 @@ const routes: Routes = [
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
   },
   {
-    path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
-  },
-  {
     path: 'master-list',
     children: [
       {
@@ -27,6 +23,10 @@ const routes: Routes = [
       loadChildren: () => import('./master-list/detail/detail.module').then( m => m.DetailPageModule)
       }
     ]
+  },
+  {
+    path: 'main-menu',
+    loadChildren: () => import('./main-menu/main-menu.module').then( m => m.MainMenuPageModule)
   }
 ];
 
