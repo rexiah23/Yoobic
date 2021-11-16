@@ -15,7 +15,6 @@ export class MasterListPage implements OnInit {
   ngOnInit() {
     this.masterListItemService.getItems().subscribe((items: any) => {
       this.listItems = items.results;
-      console.log(items.results);
     });
   }
 

@@ -1,14 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>menu</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <ion-item [routerLink]="['/master-list']">
-    <h1>Go to master list</h1>
-  </ion-item>
-  <ion-item [routerLink]="['/sign-in']">
-    <h1>Go to sign-in</h1>
-  </ion-item>
-</ion-content>
+<ion-menu content-id="main">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of appMenu">
+        <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+          <ion-label>{{p.title}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
