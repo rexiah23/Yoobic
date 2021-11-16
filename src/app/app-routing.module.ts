@@ -23,10 +23,6 @@ const routes: Routes = [
       loadChildren: () => import('./master-list/detail/detail.module').then( m => m.DetailPageModule)
       }
     ]
-  },
-  {
-    path: 'main-menu',
-    loadChildren: () => import('./main-menu/main-menu.module').then( m => m.MainMenuPageModule)
   }
 ];
 
