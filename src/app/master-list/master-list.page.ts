@@ -13,10 +13,6 @@ export class MasterListPage implements OnInit {
   constructor(private masterListItemService: MasterListItemService) { }
 
   ngOnInit() {
-    this.masterListItemService.getItems().subscribe((items: any) => {
-      const copyItemsResults = [...items.results];
-      copyItemsResults.forEach(item => item.imagePath = '../../assets/starwarslogo.png');
-      this.listItems = copyItemsResults;
-    });
+    this.masterListItemService.getItems().subscribe((items: any) => this.listItems = items);
   }
 }
