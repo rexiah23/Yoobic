@@ -14,9 +14,9 @@ export class MasterListPage implements OnInit {
 
   ngOnInit() {
     this.masterListItemService.getItems().subscribe((items: any) => {
-      this.listItems = items.results;
+      const copyItemsResults = [...items.results];
+      copyItemsResults.forEach(item => item.imagePath = '../../assets/starwarslogo.png');
+      this.listItems = copyItemsResults;
     });
   }
-
-
 }
