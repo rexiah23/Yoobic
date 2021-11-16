@@ -1,7 +1,7 @@
-/* eslint-disable max-len */
 import { Injectable } from '@angular/core';
-
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,11 @@ export class MasterListItemService {
 
   constructor(private http: HttpClient) {}
 
-  getItems() {
+  getItems(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
+
+  getChosenItem(chosenName: string): Observable<any> {
+    return this.getItems().pipe(map((items: any) => items.results.find(item_ => item_.name === chosenName)));
+  };
 }

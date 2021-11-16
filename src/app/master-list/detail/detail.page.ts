@@ -16,9 +16,8 @@ export class DetailPage implements OnInit {
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(paramMap => {
       const chosenName = paramMap.get('listItemName');
-      this.masterListItemService.getItems()
-      .subscribe((items: any) => this.chosenItem = items.results.find(item => item.name === chosenName));
+      this.masterListItemService.getChosenItem(chosenName)
+      .subscribe(item => this.chosenItem = item);
     });
   }
-
 }
