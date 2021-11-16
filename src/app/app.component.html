@@ -1,4 +1,4 @@
 <ion-app>
-    <app-menu *ngIf="currentPath !== '/sign-in'"></app-menu>
+    <app-menu *ngIf="currentPath !== '/sign-in' && currentPath !== '/'"></app-menu>
     <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
