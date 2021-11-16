@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuPage implements OnInit {
   appMenu = [
     {title: 'master-list', url:'/master-list'},
-    {title: 'master-list', url:'/master-list'},
-    {title: 'master-list', url:'/master-list'}
+    {title: 'sign-in', url:'/sign-in'}
   ];
   constructor() { }
 
